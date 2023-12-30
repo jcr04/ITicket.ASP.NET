@@ -1,0 +1,12 @@
+C:\Users\Usuario\joao\C#\ITicket\ITicket.Domain\bin\Debug\net7.0\ITicket.Domain.deps.json
+C:\Users\Usuario\joao\C#\ITicket\ITicket.Domain\bin\Debug\net7.0\ITicket.Domain.dll
+C:\Users\Usuario\joao\C#\ITicket\ITicket.Domain\bin\Debug\net7.0\ITicket.Domain.pdb
+C:\Users\Usuario\joao\C#\ITicket\ITicket.Domain\obj\Debug\net7.0\ITicket.Domain.csproj.AssemblyReference.cache
+C:\Users\Usuario\joao\C#\ITicket\ITicket.Domain\obj\Debug\net7.0\ITicket.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\joao\C#\ITicket\ITicket.Domain\obj\Debug\net7.0\ITicket.Domain.AssemblyInfoInputs.cache
+C:\Users\Usuario\joao\C#\ITicket\ITicket.Domain\obj\Debug\net7.0\ITicket.Domain.AssemblyInfo.cs
+C:\Users\Usuario\joao\C#\ITicket\ITicket.Domain\obj\Debug\net7.0\ITicket.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\joao\C#\ITicket\ITicket.Domain\obj\Debug\net7.0\ITicket.Domain.dll
+C:\Users\Usuario\joao\C#\ITicket\ITicket.Domain\obj\Debug\net7.0\refint\ITicket.Domain.dll
+C:\Users\Usuario\joao\C#\ITicket\ITicket.Domain\obj\Debug\net7.0\ITicket.Domain.pdb
+C:\Users\Usuario\joao\C#\ITicket\ITicket.Domain\obj\Debug\net7.0\ref\ITicket.Domain.dll
