@@ -20,9 +20,6 @@
 
         public int TicketsReserved { get; set; }
 
-        // Outros campos relacionados ao evento
-
-        // Relacionamento com as reservas
         public List<Reservation>? Reservations { get; set; }
     }
 }
