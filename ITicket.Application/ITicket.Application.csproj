@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+	<ProjectReference Include="..\ITicket.Infra\ITicket.Infra.csproj" />
     <ProjectReference Include="..\ITicket.Domain\ITicket.Domain.csproj" />
   </ItemGroup>
 

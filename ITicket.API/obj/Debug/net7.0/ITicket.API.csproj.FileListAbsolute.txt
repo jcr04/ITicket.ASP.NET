@@ -1,9 +1,9 @@
 C:\Users\Usuario\joao\C#\ITicket\ITicket.API\bin\Debug\net7.0\ITicket.Application.deps.json
 C:\Users\Usuario\joao\C#\ITicket\ITicket.API\bin\Debug\net7.0\ITicket.Application.runtimeconfig.json
-C:\Users\Usuario\joao\C#\ITicket\ITicket.API\bin\Debug\net7.0\ITicket.Application.exe
 C:\Users\Usuario\joao\C#\ITicket\ITicket.API\bin\Debug\net7.0\ITicket.Infra.deps.json
 C:\Users\Usuario\joao\C#\ITicket\ITicket.API\bin\Debug\net7.0\ITicket.Infra.runtimeconfig.json
 C:\Users\Usuario\joao\C#\ITicket\ITicket.API\bin\Debug\net7.0\ITicket.Infra.exe
+C:\Users\Usuario\joao\C#\ITicket\ITicket.API\bin\Debug\net7.0\ITicket.Application.exe
 C:\Users\Usuario\joao\C#\ITicket\ITicket.API\bin\Debug\net7.0\appsettings.Development.json
 C:\Users\Usuario\joao\C#\ITicket\ITicket.API\bin\Debug\net7.0\appsettings.json
 C:\Users\Usuario\joao\C#\ITicket\ITicket.API\bin\Debug\net7.0\ITicket.API.exe

@@ -400,22 +400,6 @@
           "buildTransitive/net6.0/System.Text.Json.targets": {}
         }
       },
-      "ITicket.Application/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
-        "dependencies": {
-          "ITicket.Domain": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/ITicket.Application.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/ITicket.Application.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
-      },
       "ITicket.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -1044,11 +1028,6 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "ITicket.Application/1.0.0": {
-      "type": "project",
-      "path": "../ITicket.Application/ITicket.Application.csproj",
-      "msbuildProject": "../ITicket.Application/ITicket.Application.csproj"
-    },
     "ITicket.Domain/1.0.0": {
       "type": "project",
       "path": "../ITicket.Domain/ITicket.Domain.csproj",
@@ -1057,7 +1036,6 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "ITicket.Application >= 1.0.0",
       "ITicket.Domain >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 7.0.1",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.1",
@@ -1098,9 +1076,6 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Usuario\\joao\\C#\\ITicket\\ITicket.Application\\ITicket.Application.csproj": {
-              "projectPath": "C:\\Users\\Usuario\\joao\\C#\\ITicket\\ITicket.Application\\ITicket.Application.csproj"
-            },
             "C:\\Users\\Usuario\\joao\\C#\\ITicket\\ITicket.Domain\\ITicket.Domain.csproj": {
               "projectPath": "C:\\Users\\Usuario\\joao\\C#\\ITicket\\ITicket.Domain\\ITicket.Domain.csproj"
             }

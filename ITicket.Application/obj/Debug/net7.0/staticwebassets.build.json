@@ -1,11 +1,23 @@
 {
   "Version": 1,
-  "Hash": "/oOr/i8cWjJQcTZ0pKIkSlJZysfuLGGKMWYuAoE9/zs=",
+  "Hash": "gMAk4ZP3m947mZWdXssWBJV6fT+7qQN8D/a1vv6eyaM=",
   "Source": "ITicket.Application",
   "BasePath": "_content/ITicket.Application",
   "Mode": "Default",
   "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\Usuario\\joao\\C#\\ITicket\\ITicket.Infra\\ITicket.Infra.csproj",
+      "Version": 2,
+      "Source": "ITicket.Infra",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    }
+  ],
   "DiscoveryPatterns": [],
   "Assets": []
 }

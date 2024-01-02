@@ -1,4 +1,6 @@
-﻿using ITicket.Domain.Entities;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
+using ITicket.Domain.Entities;
 
 namespace ITicket.Domain.Repositories
 {
@@ -13,6 +15,6 @@ namespace ITicket.Domain.Repositories
         Task UpdateEventAsync(Event updatedEvent);
 
         Task DeleteEventAsync(int eventId);
-
+        Task UpdateEventAsync(int id, Event updatedEvent);
     }
 }

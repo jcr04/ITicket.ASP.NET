@@ -8,7 +8,6 @@
     ".NETCoreApp,Version=v7.0": {
       "ITicket.Infra/1.0.0": {
         "dependencies": {
-          "ITicket.Application": "1.0.0",
           "ITicket.Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.1",
           "Microsoft.EntityFrameworkCore.Design": "7.0.1",
@@ -185,14 +184,6 @@
           "System.Text.Encodings.Web": "7.0.0"
         }
       },
-      "ITicket.Application/1.0.0": {
-        "dependencies": {
-          "ITicket.Domain": "1.0.0"
-        },
-        "runtime": {
-          "ITicket.Application.dll": {}
-        }
-      },
       "ITicket.Domain/1.0.0": {
         "runtime": {
           "ITicket.Domain.dll": {}
@@ -366,11 +357,6 @@
       "sha512": "sha512-DaGSsVqKsn/ia6RG8frjwmJonfos0srquhw09TlT8KRw5I43E+4gs+/bZj4K0vShJ5H9imCuXupb4RmS+dBy3w==",
       "path": "system.text.json/7.0.0",
       "hashPath": "system.text.json.7.0.0.nupkg.sha512"
-    },
-    "ITicket.Application/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
     },
     "ITicket.Domain/1.0.0": {
       "type": "project",

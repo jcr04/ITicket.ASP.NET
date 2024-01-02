@@ -1,17 +1,14 @@
 ﻿using ITicket.Domain.Entities;
+using ITicket.Domain.Repositories;
 
 namespace ITicket.Infra.Repositories
 {
-    public interface IEventEfRepository
+    public interface IEventEfRepository : IEventRepository
     {
-        Task<List<Event>> GetEventsAsync();
-
-        Task<Event> GetEventByIdAsync(int eventId);
-
-        Task CreateEventAsync(Event newEvent);
-
-        Task UpdateEventAsync(Event updatedEvent);
-
-        Task DeleteEventAsync(int eventId);
+        new Task<List<Event>> GetEventsAsync();
+        new Task<Event> GetEventByIdAsync(int eventId);
+        new Task CreateEventAsync(Event newEvent);
+        new Task UpdateEventAsync(Event updatedEvent);
+        new Task DeleteEventAsync(int eventId);
     }
 }

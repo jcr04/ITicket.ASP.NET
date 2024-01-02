@@ -12,10 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\ITicket.Application\ITicket.Application.csproj" />
     <ProjectReference Include="..\ITicket.Domain\ITicket.Domain.csproj" />
     <ProjectReference Include="..\ITicket.Infra\ITicket.Infra.csproj" />

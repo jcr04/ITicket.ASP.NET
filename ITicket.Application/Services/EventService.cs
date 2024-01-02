@@ -1,72 +1,72 @@
-﻿using ITicket.Application.DTOs;
-using ITicket.Domain.Entities;
+﻿using ITicket.Domain.Entities;
 using ITicket.Domain.Repositories;
+using ITicket.Infra.Factory;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace ITicket.Application.Services
 {
-    public class EventService
+    public class EventService : IEventRepository
     {
-        private readonly IEventRepository _eventRepository;
+        private readonly IEventRepositoryFactory _repositoryFactory;
 
-        public EventService(IEventRepository eventRepository)
+        public EventService(IEventRepositoryFactory repositoryFactory)
         {
-            _eventRepository = eventRepository;
+            _repositoryFactory = repositoryFactory ?? throw new ArgumentNullException(nameof(repositoryFactory));
         }
 
-        public async Task<List<EventDTO>> GetEventsAsync()
+        public async Task<List<Event>> GetEventsAsync()
         {
-            var events = await _eventRepository.GetEventsAsync();
-            return MapEventListToEventDTOList(events);
+            var repository = _repositoryFactory.CreateInstance();
+            var events = await repository.GetEventsAsync();
+            return MapEventListToEventList(events);
         }
 
-        public async Task<EventDTO> GetEventByIdAsync(int eventId)
+        public async Task<Event> GetEventByIdAsync(int eventId)
         {
-            var eventEntity = await _eventRepository.GetEventByIdAsync(eventId);
-            return MapEventToEventDTO(eventEntity);
+            var repository = _repositoryFactory.CreateInstance();
+            var eventEntity = await repository.GetEventByIdAsync(eventId);
+            return MapEventToEvent(eventEntity);
         }
 
-        public async Task CreateEventAsync(EventDTO eventDTO)
+        public async Task CreateEventAsync(Event newEvent)
         {
-            var newEvent = MapEventDTOToEvent(eventDTO);
-            await _eventRepository.CreateEventAsync(newEvent);
+            var repository = _repositoryFactory.CreateInstance();
+            await repository.CreateEventAsync(newEvent);
         }
 
-        public async Task UpdateEventAsync(int eventId, EventDTO updatedEventDTO)
+        public async Task UpdateEventAsync(int id, Event updatedEvent)
         {
-            var existingEvent = await _eventRepository.GetEventByIdAsync(eventId) ?? throw new NotFoundException($"Evento com ID {eventId} não encontrado.");
+            var repository = _repositoryFactory.CreateInstance();
+            var existingEvent = await repository.GetEventByIdAsync(id) ?? throw new NotFoundException($"Evento com ID {id} não encontrado.");
 
-            existingEvent.Name = updatedEventDTO.Name;
-            existingEvent.Description = updatedEventDTO.Description;
-            existingEvent.StartTime = updatedEventDTO.StartTime;
-            existingEvent.EndTime = updatedEventDTO.EndTime;
-            existingEvent.Location = updatedEventDTO.Location;
-            existingEvent.TicketPrice = updatedEventDTO.TicketPrice;
-            existingEvent.TotalTicketsAvailable = updatedEventDTO.TotalTicketsAvailable;
-            existingEvent.TicketsReserved = updatedEventDTO.TicketsReserved;
+            MapUpdatedEventToEvent(existingEvent, updatedEvent);
 
-            await _eventRepository.UpdateEventAsync(existingEvent);
+            await repository.UpdateEventAsync(existingEvent);
         }
 
         public async Task DeleteEventAsync(int eventId)
         {
-            await _eventRepository.DeleteEventAsync(eventId);
+            var repository = _repositoryFactory.CreateInstance();
+            await repository.DeleteEventAsync(eventId);
         }
 
-        private List<EventDTO> MapEventListToEventDTOList(List<Event> events)
+        private static List<Event> MapEventListToEventList(List<Event> events)
         {
-            var eventDTOList = new List<EventDTO>();
+            var eventList = new List<Event>();
 
             foreach (var eventEntity in events)
             {
-                eventDTOList.Add(MapEventToEventDTO(eventEntity));
+                eventList.Add(MapEventToEvent(eventEntity));
             }
 
-            return eventDTOList;
+            return eventList;
         }
 
-        private EventDTO MapEventToEventDTO(Event eventEntity)
+        private static Event MapEventToEvent(Event eventEntity)
         {
-            return new EventDTO
+            return new Event
             {
                 Id = eventEntity.Id,
                 Name = eventEntity.Name,
@@ -80,19 +80,22 @@ namespace ITicket.Application.Services
             };
         }
 
-        private Event MapEventDTOToEvent(EventDTO eventDTO)
+        private static void MapUpdatedEventToEvent(Event existingEvent, Event updatedEvent)
         {
-            return new Event
-            {
-                Name = eventDTO.Name,
-                Description = eventDTO.Description,
-                StartTime = eventDTO.StartTime,
-                EndTime = eventDTO.EndTime,
-                Location = eventDTO.Location,
-                TicketPrice = eventDTO.TicketPrice,
-                TotalTicketsAvailable = eventDTO.TotalTicketsAvailable,
-                TicketsReserved = eventDTO.TicketsReserved
-            };
+            existingEvent.Name = updatedEvent.Name;
+            existingEvent.Description = updatedEvent.Description;
+            existingEvent.StartTime = updatedEvent.StartTime;
+            existingEvent.EndTime = updatedEvent.EndTime;
+            existingEvent.Location = updatedEvent.Location;
+            existingEvent.TicketPrice = updatedEvent.TicketPrice;
+            existingEvent.TotalTicketsAvailable = updatedEvent.TotalTicketsAvailable;
+            existingEvent.TicketsReserved = updatedEvent.TicketsReserved;
+        }
+
+        public async Task UpdateEventAsync(Event updatedEvent)
+        {
+            var repository = _repositoryFactory.CreateInstance();
+            await repository.UpdateEventAsync(updatedEvent);
         }
     }
 }

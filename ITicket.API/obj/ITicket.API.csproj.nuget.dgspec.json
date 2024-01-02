@@ -118,6 +118,9 @@
             "projectReferences": {
               "C:\\Users\\Usuario\\joao\\C#\\ITicket\\ITicket.Domain\\ITicket.Domain.csproj": {
                 "projectPath": "C:\\Users\\Usuario\\joao\\C#\\ITicket\\ITicket.Domain\\ITicket.Domain.csproj"
+              },
+              "C:\\Users\\Usuario\\joao\\C#\\ITicket\\ITicket.Infra\\ITicket.Infra.csproj": {
+                "projectPath": "C:\\Users\\Usuario\\joao\\C#\\ITicket\\ITicket.Infra\\ITicket.Infra.csproj"
               }
             }
           }
@@ -242,9 +245,6 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Usuario\\joao\\C#\\ITicket\\ITicket.Application\\ITicket.Application.csproj": {
-                "projectPath": "C:\\Users\\Usuario\\joao\\C#\\ITicket\\ITicket.Application\\ITicket.Application.csproj"
-              },
               "C:\\Users\\Usuario\\joao\\C#\\ITicket\\ITicket.Domain\\ITicket.Domain.csproj": {
                 "projectPath": "C:\\Users\\Usuario\\joao\\C#\\ITicket\\ITicket.Domain\\ITicket.Domain.csproj"
               }

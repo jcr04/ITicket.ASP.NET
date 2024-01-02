@@ -180,7 +180,8 @@
       },
       "ITicket.Application/1.0.0": {
         "dependencies": {
-          "ITicket.Domain": "1.0.0"
+          "ITicket.Domain": "1.0.0",
+          "ITicket.Infra": "1.0.0"
         },
         "runtime": {
           "ITicket.Application.dll": {}
@@ -193,7 +194,6 @@
       },
       "ITicket.Infra/1.0.0": {
         "dependencies": {
-          "ITicket.Application": "1.0.0",
           "ITicket.Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.1",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "7.0.1"
